@@ -10,5 +10,5 @@ USER node
 COPY package*.json ./
 RUN npm install --no-optional && npm cache clean --force
 COPY . .
-HEALTHCHECK --interval=30s --timeout=30s --start-period=5s --retries=3 CMD [ "node", "healthcheck.js" ]
+HEALTHCHECK --interval=30s CMD [ "node", "healthcheck.js" ]
 CMD ["node", "server.js"]

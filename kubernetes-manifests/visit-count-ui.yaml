@@ -16,8 +16,8 @@ spec:
         image: dhvlptl/visit-count-ui
         resources:
           limits:
-            memory: "128Mi"
-            cpu: "500m"
+            memory: "100Mi"
+            cpu: "100m"
         ports:
         - containerPort: 80
 ---
