@@ -1,0 +1,16 @@
+{
+  "name": "visit-count",
+  "version": "1.0.0",
+  "description": "Visit count service",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "Dhaval",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "redis": "^3.0.2"
+  }
+}
