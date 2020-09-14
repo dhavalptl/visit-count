@@ -9,6 +9,13 @@ spec:
   - host: staging.webdevlearner.in
     http:
       paths:
+      - path: /
+        pathType: Exact
+        backend:
+          service:
+            name: visit-count-ui
+            port:
+              number: 80
       - path: /visit(/|$)(.*)
         pathType: Prefix
         backend:

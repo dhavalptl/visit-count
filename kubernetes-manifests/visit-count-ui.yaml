@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: visit-count-ui
+spec:
+  selector:
+    matchLabels:
+      app: visit-count-ui
+  template:
+    metadata:
+      labels:
+        app: visit-count-ui
+    spec:
+      containers:
+      - name: visit-count-ui
+        image: dhvlptl/visit-count-ui
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: visit-count-ui
+spec:
+  selector:
+    app: visit-count-ui
+  ports:
+  - port: 80
+    targetPort: 80
